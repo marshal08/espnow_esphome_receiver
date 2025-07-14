@@ -1,5 +1,5 @@
 esphome_component_register(
   espnow_listener ESPNowListener
   REQUIRED text_sensor
-  CONFIG espnow_listener/__init__.cpp
+  CONFIG __init__.cpp
 )
