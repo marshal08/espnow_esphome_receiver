@@ -1,4 +1,4 @@
 esphome_component_register(
-  ESPNowListener
+  espnow_listener ESPNowListener
   REQUIRED text_sensor
 )
