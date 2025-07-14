@@ -6,10 +6,14 @@ namespace espnow_listener {
 
 static ESPNowListener *instance = nullptr;
 
+void ESPNowListener::set_text_sensor(text_sensor::TextSensor *sensor) {
+  this->text_sensor_ = sensor;
+}
+
 void ESPNowListener::setup() {
   WiFi.mode(WIFI_STA);
   if (esp_now_init() != ESP_OK) {
-    ESP_LOGE("espnow_listener", "❌ ESP-NOW init failed");
+    ESP_LOGE("espnow_listener", "❌ ESP-NOW initialization failed");
     return;
   }
 
